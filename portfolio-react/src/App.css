@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: red;
+    background-image: url("C:\Users\mishr\Documents\Portfolio\portfolio-react\src\Assests\pexels-hristo-fidanov-1252873.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+.App {
+    /* border: 10px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.portfolio {
+    /* border: 10px solid #5fe616; */
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -25%;
+}
+
+/* navbar */
+
+.navbar {
+    padding: 10px;
+    padding-bottom: 0px;
+    /* background-color: black; */
+    /* border: 10px solid #5fe616; */
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.navbar-links a:hover {
+    color: #18d8d5;
+}
+
+.navbar-links a:last-child {
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-title h1:hover {
+    color: #18d8d5;
+}
+
+.navbar-title h1 {
+    color: white;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
