@@ -6,18 +6,19 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Rain } from './Components/rain';
 import { Projects } from './Components/projects';
 import { ContactMe } from './Components/contact';
+import { NotFound } from './Components/notfound';
 
 function App() {
   
   return (
     <Router>
-      <Navbar />
       <Rain />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/contact" element={<ContactMe/>} />
+        <Route path="/" element={<> <Navbar /> <Home /> </>} />
+        <Route path="/about" element={<> <Navbar /> <About /> </>} />
+        <Route path="/projects" element={<> <Navbar /> <Projects /> </>} />
+        <Route path="/contact" element={<> <Navbar /><ContactMe /> </>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

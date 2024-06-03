@@ -38,26 +38,30 @@ export function ContactMe() {
     }
 
     return (
-        <div className="contact-form">
-            <h1>Contact Me</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={e => setName(e.target.value)} required />
-                    {nameError && <div className="error">{nameError}</div>}
-                </label>
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
-                    {emailError && <div className="error">{emailError}</div>}
-                </label>
-                <label>
-                    Message:
-                    <textarea value={message} onChange={e => setMessage(e.target.value)} required />
-                    {messageError && <div className="error">{messageError}</div>}
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+        <div className='contact-form-container'>
+
+            <div className="contact-form">
+                <h1>Contact Me</h1>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={name} onChange={e => setName(e.target.value)} required />
+                        {nameError && <div className="error">{nameError}</div>}
+                    </label>
+                    <label>
+                        Email:
+                        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+                        {emailError && <div className="error">{emailError}</div>}
+                    </label>
+                    <label>
+                        Message:
+                        <textarea value={message} onChange={e => setMessage(e.target.value)} required />
+                        {messageError && <div className="error">{messageError}</div>}
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
         </div>
+
     );
 }

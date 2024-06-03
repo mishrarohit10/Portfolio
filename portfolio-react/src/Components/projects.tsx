@@ -1,21 +1,28 @@
+import { useEffect, useState } from 'react';
 import project1 from '../Assests/Eren-motivationwebp.webp';
 import project2 from '../Assests/eren-yeager.webp';
 
+interface Repo {
+    id: number;
+    name: string;
+    html_url: string;
+    description: string;
+}
+
 export function Projects() {
+    const [repos, setRepos] = useState<Repo[]>([]);
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/mishrarohit10/repos')
+            .then(response => response.json())
+            .then(data => setRepos(data));
+        console.log(repos);
+    }, []);
+
     return (
-        <div className="projects">
-            <h1>Our Projects</h1>
-            <div className="project-list">
-                <div className="project">
-                    <h2>Project 1</h2>
-                    <img src={project2} alt="Project 1" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div className="project">
-                    <h2>Project 2</h2>
-                    <img src={project1} alt="Project 2" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
+        <div className='project-container'>
+            <div className='project-card'>
+                <p>jirgbhgirhbierugrugwriuw</p>
             </div>
         </div>
     );
