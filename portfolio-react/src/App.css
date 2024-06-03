@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url("C:\Users\mishr\Documents\Portfolio\portfolio-react\src\Assests\pexels-hristo-fidanov-1252873.jpg");
+    background-image: url("./Assests/pexels-hristo-fidanov-1252873.jpg");
     background-color: #18d8d5;
     background-size: cover;
     background-repeat: no-repeat;
