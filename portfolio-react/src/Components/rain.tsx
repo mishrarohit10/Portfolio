@@ -6,3 +6,4 @@ export function Rain() {
 
     return <div className="rain">{drops}</div>;
 }
+

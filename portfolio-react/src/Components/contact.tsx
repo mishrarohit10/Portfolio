@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 export function ContactMe() {
     const [name, setName] = useState<string>("");
