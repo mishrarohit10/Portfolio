@@ -8,7 +8,7 @@ let visitor: { [key: string]: { lastVisit: number } } = {};
 let totalVisitors = 0;
 const TIME_LIMIT = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Server is running on http://localhost:3000');
 })
 

@@ -1,6 +1,7 @@
 import hoverprofilepic from '../Assests/pexels-hristo-fidanov-1252873.jpg';
 import { useState } from 'react';
 import profilepic from '../Assests/eren-yeager.webp';
+import { Visitors } from './visitors';
 
 export function Home() {
 
@@ -16,6 +17,7 @@ export function Home() {
 
     return (
         <div className="App">
+            <Visitors />
             <div className="profile-pic-container">
                 <img
                     className="portfolio"

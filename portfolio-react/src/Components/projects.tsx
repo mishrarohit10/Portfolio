@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import project1 from '../Assests/Eren-motivationwebp.webp';
-import project2 from '../Assests/eren-yeager.webp';
 
 interface Repo {
     id: number;
