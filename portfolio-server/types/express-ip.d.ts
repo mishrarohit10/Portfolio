@@ -1,1 +1,4 @@
-declare module 'express-ip';
+declare module 'express-ip' {
+  const expressIp: () => { getIpInfoMiddleware: any };
+  export default expressIp;
+}
