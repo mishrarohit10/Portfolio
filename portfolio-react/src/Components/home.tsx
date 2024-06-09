@@ -4,7 +4,6 @@ import profilepic from '../Assests/eren-yeager.webp';
 import { Visitors } from './visitors';
 
 export function Home() {
-
     const [hoverd, setHoverd] = useState(profilepic);
 
     function isHovering() {
@@ -16,17 +15,19 @@ export function Home() {
     };
 
     return (
-        <div className="App">
+        <>
             <Visitors />
-            <div className="profile-pic-container">
-                <img
-                    className="portfolio"
-                    src={hoverd}
-                    alt="profile-pic"
-                    onMouseEnter={isHovering}
-                    onMouseLeave={isNotHovering}
-                />
+            <div className="App">
+                <div className="profile-pic-container">
+                    <img
+                        className="portfolio"
+                        src={hoverd}
+                        alt="profile-pic"
+                        onMouseEnter={isHovering}
+                        onMouseLeave={isNotHovering}
+                    />
+                </div>
             </div>
-        </div>
+        </>
     )
 }

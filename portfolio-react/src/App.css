@@ -362,3 +362,22 @@ body {
     font-weight: 500;
     line-height: 1.6;
 }
+
+/* visitors */
+
+.visitors-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 20rem;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.visitors-count h1 {
+    font-size: 2em;
+    color: black;
+    background-color: blueviolet;
+}
