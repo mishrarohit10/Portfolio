@@ -33,10 +33,17 @@ export function Home() {
                 
                 <div className='home-icon-container'>
                     <div className='home-icons'>
-                        <FaLinkedin />
-                        <FaSquareXTwitter />
-                        <IoLogoGithub />
+                        <FaLinkedin size={30} />
                     </div>
+
+                    <div className='home-icons'>
+                        <FaSquareXTwitter size={30}/>
+                    </div>
+
+                    <div className='home-icons'>
+                        <IoLogoGithub size={30} />
+                    </div>
+                    
                 </div>
             </div>
         </>

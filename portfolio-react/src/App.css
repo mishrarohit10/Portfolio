@@ -383,5 +383,15 @@ body {
 }
 
 
-/* color pallet */
+/* home */
+
+.home-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+}
+
 
