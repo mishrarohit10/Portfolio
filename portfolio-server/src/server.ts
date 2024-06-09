@@ -1,22 +1,21 @@
 import express from 'express';
 import cors from 'cors';
+import expressip from 'express-ip';
 
 const app = express();
 
-let visitor = 0;
+let visitor: { [key: string]: number } = {};
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 })
 
 app.use(cors());
-app.use((req, res, next) => {
-    visitor++;
-    console.log('Visitor:', visitor);
-    next();
-})  
+app.use(expressip().getIpInfoMiddleware);
 
 app.get('/', (req, res) => {
-  res.send('Hello World Im alive');
+    const ip = req.headers['x-client-ip'] as string;
+    visitor[ip] = visitor[ip] ? visitor[ip] + 1 : 1;
+    res.json({ visitor });
 });
 
