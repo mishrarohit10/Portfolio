@@ -16,6 +16,7 @@ app.use(expressip().getIpInfoMiddleware);
 app.get('/', (req, res) => {
     const ip = req.headers['x-client-ip'] as string;
     visitor[ip] = visitor[ip] ? visitor[ip] + 1 : 1;
+    console.log(visitor);
     res.json({ visitor });
 });
 
