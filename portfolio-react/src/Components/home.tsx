@@ -33,15 +33,15 @@ export function Home() {
                 
                 <div className='home-icon-container'>
                     <div className='home-icons'>
-                        <FaLinkedin size={30} />
+                        <FaLinkedin size={40} />
                     </div>
 
                     <div className='home-icons'>
-                        <FaSquareXTwitter size={30}/>
+                        <FaSquareXTwitter size={40}/>
                     </div>
 
                     <div className='home-icons'>
-                        <IoLogoGithub size={30} />
+                        <IoLogoGithub size={40} />
                     </div>
                     
                 </div>

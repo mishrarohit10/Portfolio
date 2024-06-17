@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FaCode, FaGithub } from 'react-icons/fa';
 
 interface Repo {
     id: number;
@@ -17,11 +18,26 @@ export function Projects() {
         console.log(repos);
     }, []);
 
+    // return (
+    //     <div className='project-container'>
+    //         <div className='project-card'>
+    //             <p>this is my project</p>
+    //         </div>
+    //     </div>
+    // );
+
     return (
         <div className='project-container'>
-            <div className='project-card'>
-                <p>jirgbhgirhbierugrugwriuw</p>
-            </div>
+            {repos.map((repo) => {
+                return (
+                    <div key={repo.id} className='project-card'>
+                        <h3>{repo.name}</h3>
+                        <p>{repo.description}</p>
+                        <a href={repo.html_url} target='_blank' rel='noreferrer'> <FaCode /> Code
+                        </a>
+                    </div>
+                );
+            })}
         </div>
     );
 }
