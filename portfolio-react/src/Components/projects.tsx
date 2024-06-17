@@ -42,6 +42,11 @@ export function Projects() {
     // );
 
     return (
+        <>
+         <div className='project-heading'>
+            <h1>My Projects</h1>
+        </div>
+
         <div className='project-container'>
             {repos.map((repo) => {
                 return (
@@ -54,5 +59,6 @@ export function Projects() {
                 );
             })}
         </div>
+        </>
     );
 }
