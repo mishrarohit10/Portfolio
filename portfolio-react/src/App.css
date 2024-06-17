@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     /* background-image: url("./Assests/pexels-hristo-fidanov-1252873.jpg"); */
-    background-color: black;
+    background-color: grey;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -375,5 +375,36 @@ body {
     height: 10rem;
     width: 10rem;
     margin: 0 auto;
+}
+
+/* loader */
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+}
+
+.loader:before {
+    content: "Loading..."
+}
+
+@keyframes l2 {
+    to {
+        background-size: 100% 3px
+    }
 }
 
