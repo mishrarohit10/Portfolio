@@ -8,7 +8,6 @@ const app = express();
 dotenv.config();
 
 const secretKey = process.env.SECRET_KEY;
-console.log("secretKey:", secretKey);
 
 let visitor: { [key: string]: { lastVisit: number } } = {};
 let totalVisitors = 0;
