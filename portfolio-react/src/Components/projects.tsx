@@ -8,6 +8,7 @@ interface Repo {
     name: string;
     html_url: string;
     description: string;
+    language: string;
 }
 
 export function Projects() {
@@ -43,11 +44,11 @@ export function Projects() {
 
     return (
         <>
-         <div className='project-heading'>
-            <h1>My Projects</h1>
-        </div>
+            <div className='project-heading'>
+                <h1>My Projects</h1>
+            </div>
 
-        <div className='project-container'>
+            {/* <div className='project-container'>
             {repos.map((repo) => {
                 return (
                     <div key={repo.id} className='project-card'>
@@ -58,7 +59,21 @@ export function Projects() {
                     </div>
                 );
             })}
-        </div>
+        </div> */}
+
+            <div className='project-container'>
+                {repos.map((repo) => {
+                    return (
+                        <div key={repo.id} className='project-card'>
+                            <h3>{repo.name}</h3>
+                            <p>{repo.description}</p>
+                            <p>{repo.language}</p>
+                            <a href={repo.html_url} target='_blank' rel='noreferrer'> <FaCode /> Code
+                            </a>
+                        </div>
+                    );
+                })}
+            </div>
         </>
     );
 }
