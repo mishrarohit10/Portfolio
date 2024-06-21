@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     /* background-image: url("./Assests/pexels-hristo-fidanov-1252873.jpg"); */
-    background-color: grey;
+    background-color: rgb(25, 24, 24);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -215,14 +215,11 @@ body {
 
 .contact-form {
     padding: 2em;
-    background-color: #305fab;
-    border: black 3px solid;
+    background-color: black;
+    border: rgb(208, 53, 36) 3px solid;
     border-radius: 10px;
-    /* Light grey background */
     color: black;
-    /* Dark grey text */
     font-family: Arial, sans-serif;
-    /* Change this to your preferred font */
     width: 30rem;
 }
 
@@ -231,9 +228,10 @@ body {
     gap: 1em;
 }
 
-.contact-form label {
+.contact-form label,h1 {
     display: grid;
     gap: 0.5em;
+    color: white;
 }
 
 .contact-form input[type="text"],
@@ -374,26 +372,6 @@ body {
     width: 100vw;
 }
 
-/* HTML: <div class="loader"></div> */
-/* .loader {
-    width: fit-content;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 30px;
-    padding-bottom: 8px;
-    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
-    animation: l2 2s linear infinite;
-}
-
-.loader:before {
-    content: "Loading..."
-}
-
-@keyframes l2 {
-    to {
-        background-size: 100% 3px
-    }
-} */
 
 /* HTML: <div class="loader"></div> */
 .loader {
