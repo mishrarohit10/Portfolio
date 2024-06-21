@@ -5,6 +5,7 @@ import { Visitors } from './visitors';
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
+import { MdDownload } from "react-icons/md";
 
 export function Home() {
     const [hoverd, setHoverd] = useState(profilepic);
@@ -30,20 +31,28 @@ export function Home() {
                         onMouseLeave={isNotHovering}
                     />
                 </div>
-                
+
                 <div className='home-icon-container'>
                     <div className='home-icons'>
                         <FaLinkedin size={40} />
                     </div>
 
                     <div className='home-icons'>
-                        <FaSquareXTwitter size={40}/>
+                        <FaSquareXTwitter size={40} />
                     </div>
 
                     <div className='home-icons'>
                         <IoLogoGithub size={40} />
                     </div>
-                    
+
+                    <div className="download-btn">
+                        <a href="/path/to/your/Resume.pdf" download="YourResumeName.pdf">
+                            <p>
+                                <MdDownload size={40} />
+                                <span>Resume</span>
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </>

@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     /* background-image: url("./Assests/pexels-hristo-fidanov-1252873.jpg"); */
-    background-color: white;
+    background-color: grey;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -35,6 +35,36 @@ body {
     display: flex;
     justify-content: center;
     margin-top: -25%;
+    margin-bottom: 2rem;
+}
+
+.home-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.download-btn {
+    text-align: center;
+    background-color: grey;
+    border-radius: 15px;
+    width: 10rem;
+    border: 3px solid #0d0c0c;
+}
+
+.download-btn a {
+    text-decoration: none;
+}
+
+.download-btn p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
 }
 
 /* navbar */
@@ -330,20 +360,9 @@ body {
 .visitors-count h1 {
     font-size: 2em;
     color: black;
-    background-color: #16262E;
 }
 
 
-/* home */
-
-.home-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
-    width: 10rem;
-    margin: 0 auto;
-}
 
 /* loader */
 
@@ -356,7 +375,7 @@ body {
 }
 
 /* HTML: <div class="loader"></div> */
-.loader {
+/* .loader {
     width: fit-content;
     font-weight: bold;
     font-family: sans-serif;
@@ -373,6 +392,21 @@ body {
 @keyframes l2 {
     to {
         background-size: 100% 3px
+    }
+} */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 120px;
+    height: 20px;
+    background:
+        linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+    animation: l1 2s infinite linear;
+}
+
+@keyframes l1 {
+    100% {
+        background-size: 100%
     }
 }
 
