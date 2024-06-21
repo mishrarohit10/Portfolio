@@ -24,11 +24,15 @@ const apiUrl = 'http://localhost:3001';
 
 export function Stats() {
     const [stats, setStats] = useState<WakatimeResponse | null>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get<WakatimeResponse>(`${apiUrl}/stats`)
             .then((response) => {
                 setStats(response.data);
+            })
+            .then(() => {
+                setLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching data: ', error);
@@ -37,38 +41,29 @@ export function Stats() {
 
     return (
         <div className="stats">
-            <div className="stats-container">
+            {loading ? <Loader /> : <div className="stats-container">
                 <div className="stats-title">
                     <h1>Stats</h1>
                 </div>
                 <div className="stats-content">
-                    {stats ? (
-                        <>
-                            <p>
-                                Total time spent coding: {stats.data.human_readable_total}
-                            </p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Language</th>
-                                        <th>Time</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {stats.data.languages.map((language) => (
-                                        <tr key={language.name}>
-                                            <td>{language.name}</td>
-                                            <td>{language.text}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </>
-                    ) : (
-                        <Loader />
-                    )}
+                    <div>
+                        <div className="stats-total">
+                            <h2>Total time spent coding: {stats?.data.human_readable_total}</h2>
+                        </div>
+                        <div className="stats-languages">
+                            <h2>Languages</h2>
+                            <div className="stats-languages-container">
+                                {stats?.data.languages.map((language, index) => (
+                                    <div key={index} className="stats-language">
+                                        <h3>{language.name}</h3>
+                                        <p>{language.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div>}  
         </div>
     );
 }

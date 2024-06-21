@@ -52,6 +52,7 @@ interface WakatimeResponse {
     }
 }
 
+
 app.get('/stats', async(req, res) => {
   try {
     const response: AxiosResponse<WakatimeResponse> = await axios.get(`https://wakatime.com/api/v1/users/current/stats/all_time?api_key=${secretKey}`);
