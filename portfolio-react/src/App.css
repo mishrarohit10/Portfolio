@@ -393,6 +393,11 @@ h1 {
 
 /* stats */
 
+.stats-wrapper {
+    overflow-y: auto;
+    height: 100vh;
+}
+
 .stats-container {
     display: flex;
     justify-content: space-around;

@@ -41,23 +41,25 @@ export function Stats() {
 
     return (
         <>
-            {loading ? <Loader /> : 
-            <div className="stats-container">
-                <div className="stats-title">
-                    <h1>Stats</h1>
-                </div>
-                <div className="stats-total">
-                    <h2>Total time spent coding: {stats?.data.human_readable_total}</h2>
-                </div>
-                    <div className="stats-languages-container">
-                        {stats?.data.languages.map((language, index) => (
-                            <div key={index} className="stats-language">
-                                <h3>{language.name}</h3>
-                                <p>{language.text}</p>
-                            </div>
-                        ))}
-                    </div>
-            </div>}
+            <div className='stats-wrapper'>
+                {loading ? <Loader /> :
+                    <div className="stats-container">
+                        <div className="stats-title">
+                            <h1>Stats</h1>
+                        </div>
+                        <div className="stats-total">
+                            <h2>Total time spent coding: {stats?.data.human_readable_total}</h2>
+                        </div>
+                        <div className="stats-languages-container">
+                            {stats?.data.languages.map((language, index) => (
+                                <div key={index} className="stats-language">
+                                    <h3>{language.name}</h3>
+                                    <p>{language.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>}
+            </div>
         </>
     );
 }
