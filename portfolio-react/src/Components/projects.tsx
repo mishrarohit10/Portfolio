@@ -34,45 +34,26 @@ export function Projects() {
         return <div> <Loader /> </div>;
     }
 
-    // return (
-    //     <div className='project-container'>
-    //         <div className='project-card'>
-    //             <p>this is my project</p>
-    //         </div>
-    //     </div>
-    // );
-
     return (
         <>
-            <div className='project-heading'>
-                <h1>My Projects</h1>
-            </div>
+            <div className='project-wrapper'>
+                <div className='project-heading'>
+                    <h1>My Projects</h1>
+                </div>
 
-            {/* <div className='project-container'>
-            {repos.map((repo) => {
-                return (
-                    <div key={repo.id} className='project-card'>
-                        <h3>{repo.name}</h3>
-                        <p>{repo.description}</p>
-                        <a href={repo.html_url} target='_blank' rel='noreferrer'> <FaCode /> Code
-                        </a>
-                    </div>
-                );
-            })}
-        </div> */}
-
-            <div className='project-container'>
-                {repos.map((repo) => {
-                    return (
-                        <div key={repo.id} className='project-card'>
-                            <h3>{repo.name}</h3>
-                            <p>{repo.description}</p>
-                            <p>{repo.language}</p>
-                            <a href={repo.html_url} target='_blank' rel='noreferrer'> <FaCode /> Code
-                            </a>
-                        </div>
-                    );
-                })}
+                <div className='project-container'>
+                    {repos.map((repo) => {
+                        return (
+                            <div key={repo.id} className='project-card'>
+                                <h3>{repo.name}</h3>
+                                <p>{repo.description}</p>
+                                <p>{repo.language}</p>
+                                <a href={repo.html_url} target='_blank' rel='noreferrer'> <FaCode /> Code
+                                </a>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </>
     );
