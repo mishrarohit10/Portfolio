@@ -1,33 +1,37 @@
+import StackIcon from "tech-stack-icons";
 
 export function About() {
     return (
         <div className="about" id="about">
             <div className="about-container">
-        
+
 
                 <div className="about-title">
                     <h1>About Me</h1>
                 </div>
-
-                <div>
-                    ts
-                    js
-                    py
-                    java
-                    Springboot
-                    Node
-                    fastapi
-                    PostgreSQL
-                    MongoDB
-                    React
-                    docker
-                    golang
-                    postman
-                    swagger
-                    Express
-                    aws
-                    linux
-                </div>
+                <StackIcon name="js" />
+                <StackIcon name="reactjs" />
+                <StackIcon name="node" />
+                <StackIcon name="express" />
+                <StackIcon name="mongodb" />
+                <StackIcon name="postgresql" />
+                <StackIcon name="java" />
+                <StackIcon name="spring" />
+                <StackIcon name="go" />
+                <StackIcon name="python" />
+                <StackIcon name="typescript" />
+                <StackIcon name="git" />
+                <StackIcon name="github" />
+                <StackIcon name="docker" />
+                <StackIcon name="aws" />
+                <StackIcon name="azure" />
+                <StackIcon name="vscode" />
+                <StackIcon name="postman" />
+                <StackIcon name="gitlab" />
+                <StackIcon name="linux" />
+                <StackIcon name="nodejs" />
+                <StackIcon name="npm" />
+                <StackIcon name="swagger" />
 
                 <div className="about-content">
                     <p>
