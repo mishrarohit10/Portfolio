@@ -14,41 +14,41 @@ let totalVisitors = 0;
 const TIME_LIMIT = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
 app.listen(3001, () => {
-    console.log('Server is running on http://localhost:3001');
+  console.log('Server is running on http://localhost:3001');
 })
 
 app.use(cors());
 app.use(expressip().getIpInfoMiddleware);
 
 app.get('/', (req, res) => {
-    const ip = req.ipInfo?.ip;
-    if (!ip) {
-        return res.status(500).json({ error: 'Unable to determine IP' });
+  const ip = req.ipInfo?.ip;
+  if (!ip) {
+    return res.status(500).json({ error: 'Unable to determine IP' });
     }
-    const now = Date.now();
-    if (!visitor[ip] || now - visitor[ip].lastVisit > TIME_LIMIT) {
-        visitor[ip] = { lastVisit: now };
-        totalVisitors++;
-    }
-    console.log('visitor:', visitor);
-    res.json({ totalVisitors, visitor });
+  const now = Date.now();
+  if (!visitor[ip] || now - visitor[ip].lastVisit > TIME_LIMIT) {
+    visitor[ip] = { lastVisit: now };
+    totalVisitors++;
+  }
+  console.log('visitor:', visitor);
+  res.json({ totalVisitors, visitor });
 });
 
 interface Language {
-    name: string;
-    total_seconds: number;
-    percent: number;
-    digital: string;
-    decimal: string;
-    text: string;
-    hours: number;
-    minutes: number;
+  name: string;
+  total_seconds: number;
+  percent: number;
+  digital: string;
+  decimal: string;
+  text: string;
+  hours: number;
+  minutes: number;
 }
 
 interface WakatimeResponse {
-    data: {
-        human_readable_total: string,
-        languages: Language[];
+  data: {
+      human_readable_total: string,
+      languages: Language[];
     }
 }
 
