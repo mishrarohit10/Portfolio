@@ -41,9 +41,10 @@ body {
 
 .home-icon-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
+    width: 20rem;
 }
 
 .download-btn {
