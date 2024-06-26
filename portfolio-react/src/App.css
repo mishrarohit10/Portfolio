@@ -456,7 +456,15 @@ body {
     font-size: 1.5em;
 }
 
+.stats-language p {
+    color: rgb(122, 86, 111);
+    font-size: 1em;
+}
 
+.stats-language h3 {
+    color: #2f3542;
+    font-size: 1.5em;
+}
 
 
 
