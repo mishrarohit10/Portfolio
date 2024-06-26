@@ -49,8 +49,7 @@ body {
 
 .download-btn {
     text-align: center;
-    background-color: grey;
-    border-radius: 15px;
+    border-radius: 40px;
     width: 10rem;
     border: 3px solid #0d0c0c;
 }
