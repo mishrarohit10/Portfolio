@@ -32,8 +32,9 @@ export function ContactMe() {
         }
 
         if (name !== "" && /\S+@\S+\.\S+/.test(email) && message !== "") {
-            // Here you would typically send the form data to a server or an email
             console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+            // send it to server
+            
         }
     }
 
