@@ -46,7 +46,7 @@ export function Home() {
                     </div>
 
                     <div className="download-btn">
-                        <a href="/path/to/your/Resume.pdf" download="YourResumeName.pdf">
+                        <a href="portfolio-react\src\Assests\Rohit-Resume.pdf" download="Rohit-Resume.pdf">
                             <p>
                                 <MdDownload size={40} />
                                 <span>Resume</span>
