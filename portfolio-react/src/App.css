@@ -52,6 +52,7 @@ body {
     border-radius: 40px;
     width: 10rem;
     border: 3px solid #0d0c0c;
+    background-color: rgb(14, 190, 248);
 }
 
 .download-btn a {
@@ -176,12 +177,12 @@ body {
 }
 
 .project-card {
-    border: 1px solid white;
+    background-color: black;
+    border: 5px solid black;
     width: 20rem;
     height: 20rem;
     margin: 0 10px;
     border-radius: 8px;
-    background-color: black;
     margin: 1.5rem 0;
     position: relative;
 }
@@ -201,11 +202,11 @@ body {
 }
 
 .project-card:hover {
-    background-color: #2e4756;
+    background-color: rgb(159, 205, 210);
 }
 
 .project-card h3,p,a {
-    color: white;
+    color: black;
 }
 
 .project-card h3, p {
@@ -228,13 +229,14 @@ body {
 
 .contact-form {
     padding: 2em;
-    background-color: black;
+    /* background-color: black; */
     border-radius: 10px;
     color: black;
     font-family: Arial, sans-serif;
-    width: 25rem;
+    width: 30rem;
+    height: 30rem;
     margin: auto;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3.1);
 }
 
 .contact-form form {
@@ -255,6 +257,11 @@ body {
     padding: 0.5em;
     border: 1px solid #ddd;
     border-radius: 0.5em;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 10em;
 }
 
 .contact-form input[type="submit"] {
