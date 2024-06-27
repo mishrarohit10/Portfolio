@@ -1,4 +1,4 @@
-import hoverprofilepic from '../Assests/susano.jpg';
+import hoverprofilepic from '../Assests/eren-yeager.webp';
 import { useState } from 'react';
 import profilepic from '../Assests/eren-yeager.webp';
 import { Visitors } from './visitors';
