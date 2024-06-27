@@ -18,7 +18,7 @@ export function Visitors() {
 
     return (
         <div className="visitors-count">
-            <h1>Visitors: {count}</h1>
+            {/* <h1>Visitors: {count}</h1> */}
         </div>
     )
 }
