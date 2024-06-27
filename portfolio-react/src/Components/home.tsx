@@ -34,19 +34,19 @@ export function Home() {
 
                 <div className='home-icon-container'>
                     <div className='home-icons'>
-                        <FaLinkedin size={40} />
+                        <FaLinkedin size={50} />
                     </div>
 
                     <div className='home-icons'>
-                        <FaSquareXTwitter size={40} />
+                        <FaSquareXTwitter size={50} />
                     </div>
 
                     <div className='home-icons'>
-                        <IoLogoGithub size={40} />
+                        <IoLogoGithub size={50} />
                     </div>
 
                     <div className="download-btn">
-                        <a href="/Rohit-Resume.pdf" download="Rohit-Resume.pdf">
+                        <a href="/Rohit-Mishra-Resume.pdf" download="Rohit-Resume.pdf">
                             <p>
                                 <MdDownload size={40} />
                                 <span>Resume</span>
