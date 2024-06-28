@@ -177,7 +177,7 @@ body {
 }
 
 .project-card {
-    background-color: black;
+    /* background-color: black; */
     border: 5px solid black;
     width: 20rem;
     height: 20rem;
