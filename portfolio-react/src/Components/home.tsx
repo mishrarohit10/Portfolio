@@ -34,15 +34,21 @@ export function Home() {
 
                 <div className='home-icon-container'>
                     <div className='home-icons'>
-                        <FaLinkedin size={50} />
+                        <a href="https://www.linkedin.com/in/mishrarohit10/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin size={50} />
+                        </a>
                     </div>
 
                     <div className='home-icons'>
-                        <FaSquareXTwitter size={50} />
+                        <a href="https://x.com/mishrajeeee" target="_blank" rel="noopener noreferrer">
+                            <FaSquareXTwitter size={50} />
+                        </a>
                     </div>
 
                     <div className='home-icons'>
-                        <IoLogoGithub size={50} />
+                        <a href="https://github.com/mishrarohit10/" target="_blank" rel="noopener noreferrer">
+                            <IoLogoGithub size={50} />
+                        </a>
                     </div>
 
                     <div className="download-btn">
