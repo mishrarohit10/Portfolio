@@ -51,9 +51,14 @@ body {
     background-color: rgb(14, 190, 248);
 }
 
+.download-btn:hover {
+    background-color: rgb(63, 186, 159);
+}
+
 .download-btn a {
     text-decoration: none;
 }
+
 
 .download-btn p {
     display: flex;
